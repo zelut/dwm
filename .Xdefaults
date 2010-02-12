@@ -1,0 +1,23 @@
+Xft*antialias: true
+Xft*dpi: 96
+Xft*hinting: true
+Xft*hintstyle: hintfull
+Xft*rgba: rgb
+
+Xterm*background: black
+Xterm*foreground: grey
+
+URxvt*background: black
+URxvt*foreground: grey
+URxvt*font: xft:Droid Sans Mono-8
+URxvt*cursorColor: green
+
+URxvt*fading: 10 
+URxvt*fadeColor: black
+URxvt*shading: 90
+URxvt*inheritPixmap: true
+
+URxvt*scrollBar: false
+URxvt*perl-ext: default,matcher
+URxvt.urlLauncher: /usr/bin/google-chrome
+URxvt.matcher.button: 2
