@@ -313,7 +313,7 @@ set follow_hint_keys = 0123456789
 #set follow_hint_keys = qwerty
 #set follow_hint_keys = asdfghjkl;
 #set follow_hint_keys = thsnd-rcgmvwb/;789aefijkopquxyz234
-@cbind  fl*  = script @scripts_dir/follow.js '@follow_hint_keys %s'
+@cbind  ff*  = script @scripts_dir/follow.js '@follow_hint_keys %s'
 
 # --- Form filler binds ---
 # this script allows you to configure (per domain) values to fill in form
@@ -385,4 +385,5 @@ set default_mode = command
 # === Post-load misc commands  ===============================================
 
 # Set the "home" page.
-set uri = uzbl.org/doesitwork/@COMMIT
+##set uri = uzbl.org/doesitwork/@COMMIT
+set uri = http://google.com
