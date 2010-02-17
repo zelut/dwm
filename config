@@ -253,9 +253,10 @@ set preset = event PRESET_TABS
 @cbind  gli                 = @preset list
 
 # --- Web searching binds ---
-@cbind  \\google<Google:>_         = uri http://www.google.com/search?q=\@<encodeURIComponent(%r)>\@
-@cbind  \\awiki<Archwiki:>_  = uri http://wiki.archlinux.org/index.php/Special:Search?search=\@<encodeURIComponent(%r)>\@&go=Go
-@cbind  \\wiki<Wikipedia:>_  = uri http://en.wikipedia.org/w/index.php?title=Special:Search&search=\@<encodeURIComponent(%r)>\@&go=Go
+@cbind  \\google<Google:>_          = uri http://www.google.com/search?q=\@<encodeURIComponent(%r)>\@
+@cbind  \\awiki<Archwiki:>_         = uri http://wiki.archlinux.org/index.php/Special:Search?search=\@<encodeURIComponent(%r)>\@&go=Go
+@cbind  \\wiki<Wikipedia:>_         = uri http://en.wikipedia.org/w/index.php?title=Special:Search&search=\@<encodeURIComponent(%r)>\@&go=Go
+@cbind  \\ut<Ubuntu Tutorials:>_    = uri http://ubuntu-tutorials.com/?s=\@<encodeURIComponent(%r)>\@&go=Go
 
 # --- Handy binds ---
 # Set fuction shortcut
@@ -385,5 +386,4 @@ set default_mode = command
 # === Post-load misc commands  ===============================================
 
 # Set the "home" page.
-##set uri = uzbl.org/doesitwork/@COMMIT
-set uri = http://google.com
+set uri = uzbl.org/doesitwork/@COMMIT
