@@ -19,7 +19,8 @@ URxvt*inheritPixmap: true
 
 URxvt*scrollBar: false
 URxvt*perl-ext: default,matcher,mark-yank-urls
-URxvt*urlLauncher: /home/cedwards/urxvt-uzbl.sh
+!URxvt*urlLauncher: /home/cedwards/urxvt-uzbl.sh
+URxvt*urlLauncher: /usr/bin/chromium
 URxvt*matcher.button: 2
 URxvt*keysym.M-u: perl:mark-yank-urls:activate_mark_mode
 URxvt*underlineURLs: true
