@@ -33,8 +33,8 @@ static const Rule rules[] = {
 static const float mfact      = 0.55; /* factor of master area size [0.05..0.95] */
 static const Bool resizehints = False; /* True means respect size hints in tiled resizals */
 
-#include "bstack.c"
-#include "bstackhoriz.c"
+#include "/home/cedwards/Projects/dwm/bstack.c"
+#include "/home/cedwards/Projects/dwm/bstackhoriz.c"
 
 static const Layout layouts[] = {
 	/* symbol   arrange function */
