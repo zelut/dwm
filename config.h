@@ -24,8 +24,8 @@ static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
 
 static const Rule rules[] = {
 	/* class            instance    title       tags mask   isfloating  monitor */
-	{ "Gimp",           NULL,       NULL,       0,          True,       -1 },
-	{ "Firefox",        NULL,       NULL,       1 << 8,     False,      -1 },
+    { "Gimp",           NULL,       NULL,       0,          True,       -1 },
+    { "Firefox",        NULL,       NULL,       0,          False,      -1 },
     { "Google-chrome",  NULL,       NULL,       2,          False,      -1 },
 };
 
@@ -33,8 +33,8 @@ static const Rule rules[] = {
 static const float mfact      = 0.55; /* factor of master area size [0.05..0.95] */
 static const Bool resizehints = False; /* True means respect size hints in tiled resizals */
 
-#include "/home/cedwards/Projects/dwm/bstack.c"
-#include "/home/cedwards/Projects/dwm/bstackhoriz.c"
+#include "/home/cedwards/Projects/dwm.git/bstack.c"
+#include "/home/cedwards/Projects/dwm.git/bstackhoriz.c"
 
 static const Layout layouts[] = {
 	/* symbol   arrange function */
