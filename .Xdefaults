@@ -18,10 +18,11 @@ URxvt*shading: 90
 URxvt*inheritPixmap: true
 
 URxvt*scrollBar: false
-URxvt*perl-ext: default,matcher,mark-yank-urls
-!URxvt*urlLauncher: /home/cedwards/urxvt-uzbl.sh
-URxvt*urlLauncher: /usr/bin/chromium
-URxvt*matcher.button: 2
-URxvt*keysym.M-u: perl:mark-yank-urls:activate_mark_mode
 URxvt*underlineURLs: true
-URxvt*perl-lib: /home/cedwards/.urxvt/
+
+## requires urxvt-url-select from AUR
+URxvt.perl-ext-common:  default,url-select
+URxvt.keysym.M-u:       perl:url-select:select_next
+URxvt.urlLauncher:      firefox
+URxvt.underlineURLs:    true
+
