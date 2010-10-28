@@ -1,0 +1,7 @@
+PKGBUILD
+dwm-5.8.2-2-i686.pkg.tar.xz
+dwm-5.8.2.tar.gz
+dwm.desktop
+dwm.install
+pkg/
+src/
