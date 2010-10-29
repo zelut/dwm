@@ -1,13 +1,7 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-static const char font[]            = "-*-*-medium-*-*-*-14-*-*-*-*-*-*-*";
-//static const char normbordercolor[] = "#cccccc";
-//static const char normbgcolor[]     = "#cccccc";
-//static const char normfgcolor[]     = "#000000";
-//static const char selbordercolor[]  = "#0066ff";
-//static const char selbgcolor[]      = "#0066ff";
-//static const char selfgcolor[]      = "#ffffff";
+static const char font[]            = "-*-terminus-*-*-*-*-12-*-*-*-*-*-*-*";
 static const char normbordercolor[] = "#cccccc";
 static const char normbgcolor[]     = "#0033CC";
 static const char normfgcolor[]     = "#cccccc";
@@ -16,7 +10,7 @@ static const char selbgcolor[]      = "#ffffff";
 static const char selfgcolor[]      = "#0033CC";
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
-static const Bool showbar           = False;     /* False means no bar */
+static const Bool showbar           = False;    /* False means no bar */
 static const Bool topbar            = False;    /* False means bottom bar */
 
 /* tagging */
@@ -38,9 +32,9 @@ static const Bool resizehints = False; /* True means respect size hints in tiled
 
 static const Layout layouts[] = {
 	/* symbol   arrange function */
-    { "===",    bstackhoriz },
+    { "===",    bstackhoriz }, /* first entry is default */
     { "TTT",    bstack },
-	{ "[]=",    tile },    /* first entry is default */
+	{ "[]=",    tile },
 	{ "><>",    NULL },    /* no layout function means floating behavior */
 	{ "[M]",    monocle },
 };
