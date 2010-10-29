@@ -4,29 +4,31 @@
 # (cedwards@zelut.org)
 
 # set some lazy-variables
-DWM_GIT="${HOME}/Projects/dwm.git"
+DWM_GIT="/home/cedwards/Projects/dwm.git"
+DWM_DEST="/home/cedwards"
 
 # permission checks
 if [ ${UID} != 0 ]; then
     echo "run with sudo"
-    return 1
+    exit 1
 fi
 
-(pacman -Q artwiz-fonts)            || return 1
-(pacman -Q dwm)                     || return 1
-(pacman -Q dmenu)                   || return 1
-(pacman -Q rxvt-unicode-256color)   || return 1
-(pacman -Q terminus-font)           || return 1
+(pacman -Q artwiz-fonts)            || exit 1
+(pacman -Q dwm)                     || exit 1
+(pacman -Q dmenu)                   || exit 1
+(pacman -Q rxvt-unicode-256color)   || exit 1
+(pacman -Q terminus-font)           || exit 1
+(pacman -Q slim)                    || exit 1
 
 # begin linking
-ln -s "${DWM_GIT}"/.Xdefaults          "${HOME}"/.Xdefaults &>/dev/null
-ln -s "${DWM_GIT}"/.xinitrc            "${HOME}"/.xinitrc &>/dev/null
-ln -s "${DWM_GIT}"/.bash_aliases       "${HOME}"/.bash_aliases &>/dev/null
-ln -s "${DWM_GIT}"/battery.py          "${HOME}"/battery.py &>/dev/null
-ln -s "${DWM_GIT}"/server_room_temp.pl "${HOME}"/server_room_temp.pl &>/dev/null
-ln -s "${DWM_GIT}"/dwm.png             "${HOME}"/dwm.png
+ln -s "${DWM_GIT}"/.Xdefaults          "${DWM_DEST}"/.Xdefaults &>/dev/null
+ln -s "${DWM_GIT}"/.xinitrc            "${DWM_DEST}"/.xinitrc &>/dev/null
+ln -s "${DWM_GIT}"/.bash_aliases       "${DWM_DEST}"/.bash_aliases &>/dev/null
+ln -s "${DWM_GIT}"/battery.py          "${DWM_DEST}"/battery.py &>/dev/null
+ln -s "${DWM_GIT}"/server_room_temp.pl "${DWM_DEST}"/server_room_temp.pl &>/dev/null
+ln -s "${DWM_GIT}"/dwm.png             "${DWM_DEST}"/dwm.png
 
-/usr/bin/feh --bg-scale "${HOME}/dwm.png"
+/usr/bin/feh --bg-scale "${DWM_GIT}"/dwm.png
 
 /bin/cp -a dwm02 /usr/share/slim/themes/
 
