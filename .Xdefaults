@@ -9,7 +9,7 @@ Xterm*foreground: grey
 
 URxvt*background: black
 URxvt*foreground: grey
-URxvt*font: xft:Droid Sans Mono Slashed-8
+URxvt*font: xft:Terminus-8
 URxvt*cursorColor: green
 
 URxvt*fading: 10 

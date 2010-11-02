@@ -8,10 +8,19 @@
 # exec startkde
 # exec startxfce4
 # ...or the Window Manager of your choice
+
+## launch agents
 eval $(/usr/bin/killall ssh-agent; /usr/bin/ssh-agent)
 eval $(/usr/bin/killall gpg-agent; /usr/bin/gpg-agent --daemon)
-~/.dropbox-dist/dropboxd &
-sh ~/.fehbg &
+
+## launch dropbox, if installed
+[ -x ~/.dropbox-dist/dropboxd & ]
+
+## set the desktop background
+[ -f ~/.fehbg ] && sh ~/.fehbg &
+[ ! -f ~/.fehbg ] && feh --bg-scale dwm.png
+
+## launch urxvt daemon
 urxvtd -q -o -f
 
 ## set status bar output
@@ -20,4 +29,5 @@ while true; do
     sleep 1m
 done &
 
+## launch dwm
 exec dwm
